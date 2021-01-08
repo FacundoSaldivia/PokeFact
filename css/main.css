@@ -1,0 +1,86 @@
+@font-face {
+  src: url(/font/pkm.ttf);
+  font-family: nose;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: nose;
+}
+
+:root {
+  --bg-color: #f0ece3;
+}
+
+.dark-mode {
+  --bg-color: #222831;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container .box {
+  width: 60%;
+  height: 50%;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.container .box .poke-img {
+  position: absolute;
+  top: 10rem;
+  width: 150px;
+  height: 150px;
+}
+
+.container .box .types {
+  padding-top: 7vh;
+  justify-content: center;
+  z-index: 1;
+}
+
+.container .box .types img {
+  width: 70px;
+  transform: translate(0, -50%);
+}
+
+.container .box .fact {
+  position: absolute;
+  margin: 20vh 30vw;
+}
+
+.container .box .fact p {
+  text-align: center;
+  word-spacing: 10px;
+  line-height: 1.5;
+}
+
+.container .box .buttons {
+  width: 100%;
+  position: absolute;
+}
+
+.container .box .buttons .left {
+  position: absolute;
+  left: 30rem;
+  top: 20rem;
+}
+
+.container .box .buttons .right {
+  position: absolute;
+  right: 30rem;
+  top: 20rem;
+}
+
+.container .box .buttons button.closed {
+  display: none;
+}
