@@ -12,6 +12,9 @@ function consultarPkm(id){
         .then(function(pokemon){
             crearPkm(pokemon);
         })
+        .catch(function(response){
+            console.log('no existe kpo')
+        })
     })
 }
 
@@ -26,14 +29,29 @@ function consultarEspecie(id){
 
 function consultarType(pokemon){
     pokemon.types.forEach(type =>{
-        agregarType(type.type.name)
+        if (!typeArray.includes(type.type.name)) {
+            typeArray.push(type.type.name);
+        } 
     })
+    bgType(typeArray)
+    agregarType(typeArray)
+    
+    typeArray.length = 0;
 }
 
-function agregarType(type){
-    typeArray.push(type);
-    tipo[0].setAttribute('src',`img/${typeArray[0]}.png`)
+function agregarType(array){
+    tipo[0].setAttribute('src',`img/${array[0]}.png`)
     tipo[1].setAttribute('src',`img/${typeArray[1]}.png`)
+ 
+}
+
+function bgType(array){
+    if (array.length > 1){
+        document.body.style.background = `linear-gradient(76deg, var(--${array[0]}) 0%, var(--${array[1]}) 100%)`
+        console.log()
+    } else if ( array.length == 1){
+        document.body.style.background = `var(--${array[0]})`
+    }
 }
 
 
@@ -45,20 +63,13 @@ function crearPkmFact(pokemon){
             if(element.flavor_text != dataParaComparacion){
                 dataParaComparacion = element.flavor_text;
                 pkmFactArray.push(element.flavor_text);
-
             }
         }  
     })
     mostrarPkmFact(pkmFactArray)
 }
-var asd = 0;
-function boton(num){
-    console.log(asd)
-    return asd;
-}
 var a = 0;
 function mostrarPkmFact(arrPkmFact){
-    console.log(a)
     if (a >= 0 && a < arrPkmFact.length){
         pkmFact.textContent = arrPkmFact[a];
         leftButton.classList.remove('closed')
@@ -80,22 +91,25 @@ function crearPkm(pokemon){
     pkmImg.setAttribute('src',pokemon.sprites.front_default)
     consultarEspecie(pokemon.id)
 }
-var as = 0;
+var pkmSearch = 1;
 
 leftButton.addEventListener('click', ()=>{
     a--
-    consultarPkm(1)
+    consultarPkm(pkmSearch)
  })
  rightButton.addEventListener('click', ()=>{
     a++
-    consultarPkm(1)
+    consultarPkm(pkmSearch)
  })
 
- consultarPkm(1)
 
- function search(ele) {
-    if(Event.key === 13) {
-        alert(ele.value);        
-    }
-}
-search(input);
+
+var barInput = document.getElementById("myInput");
+barInput.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   pkmSearch = (barInput.value);
+   consultarPkm(pkmSearch)
+   barInput.value = '';
+  }
+});
+consultarPkm(pkmSearch)

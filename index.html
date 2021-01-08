@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <input id='input' class="input" type="text" onkeypress="search(this)">
+        <div class="barra">
+            <input id="myInput" value="" placeholder="bulbasaur or 1">
+            <button id="myBtn" onclick=""><i class="fas fa-search"></i></button>
+        </div>
         <div class="box">
             <img id= 'poke-img' class = 'poke-img' src="" alt="">
             <div class="types">
@@ -19,8 +23,8 @@
                 <p id='fact'></p>
             </div>
             <div class="buttons">
-                <button id="left" class="left">Left</button>
-                <button id='right' class="right">Right</button>
+                <button id="left" class="arrow left"></button>
+                <button id='right' class="arrow right"></button>
             </div>
         </div>
     </div>    
