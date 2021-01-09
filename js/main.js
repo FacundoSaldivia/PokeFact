@@ -109,7 +109,7 @@ leftButton.addEventListener('click', ()=>{
 var barInput = document.getElementById("myInput");
 barInput.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
-   pkmSearch = (barInput.value);
+   pkmSearch = (barInput.value.toLowerCase());
    consultarPkm(pkmSearch)
    barInput.value = '';
   }
