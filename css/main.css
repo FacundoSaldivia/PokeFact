@@ -8,8 +8,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: nose;
-  opacity: 1;
-  transition: 1s;
 }
 
 :root {
@@ -32,10 +30,6 @@ body {
   --rock: #857034;
   --steel: #ccccdc;
   --water: #1470cd;
-}
-
-.dark-mode {
-  --bg-color: #222831;
 }
 
 .container {
@@ -68,6 +62,10 @@ body {
 
 .container .barra button:focus {
   outline: 0;
+}
+
+.container .barra button:hover {
+  cursor: pointer;
 }
 
 .container .box {
