@@ -13,7 +13,8 @@ function consultarPkm(id){
             crearPkm(pokemon);
         })
         .catch(function(response){
-            console.log('no existe kpo')
+            console.log('no existe kpo');
+            consultarPkm(1);
         })
     })
 }
@@ -38,11 +39,10 @@ function consultarType(pokemon){
     
     typeArray.length = 0;
 }
-
+var auxArr = []
 function agregarType(array){
-    tipo[0].setAttribute('src',`img/${array[0]}.png`)
-    tipo[1].setAttribute('src',`img/${typeArray[1]}.png`)
- 
+        tipo[0].setAttribute('src',`img/${array[0]}.png`)
+        tipo[1].setAttribute('src',`img/${typeArray[1]}.png`)
 }
 
 function bgType(array){
