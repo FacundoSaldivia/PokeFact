@@ -51,16 +51,17 @@ body {
 }
 
 .container .barra input {
-  width: 200px;
+  width: 300px;
   height: 25px;
   padding-left: 5px;
+  text-align: center;
   outline: thick double #e0e0e0;
 }
 
 .container .barra button {
   position: absolute;
   top: 0.5rem;
-  left: 11rem;
+  left: 17.3rem;
   width: 28px;
   background: transparent;
   border: none;
