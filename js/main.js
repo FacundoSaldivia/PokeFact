@@ -91,7 +91,15 @@ function crearPkm(pokemon){
     pkmImg.setAttribute('src',pokemon.sprites.front_default)
     consultarEspecie(pokemon.id)
     pkmName.textContent = pokemon.name;
+    if(pkmSearch == 1){
+        leftPkm.classList.add('closed')
+    } else{
+        leftPkm.classList.remove('closed')
+    }
+
 }
+
+/** facts buttons */
 var pkmSearch = 1;
 
 leftButton.addEventListener('click', ()=>{
@@ -104,7 +112,7 @@ leftButton.addEventListener('click', ()=>{
  })
 
 
-
+/** Searchbar and searchbutton */
 var barInput = document.getElementById("myInput");
 var barBtn = document.getElementById('myBtn');
 barInput.addEventListener("keyup", function(event) {
@@ -120,4 +128,20 @@ barBtn.addEventListener("click", function() {
      barInput.value = '';
      console.log('asd')
   });
+  var leftPkm = document.getElementById("left-pkm");
+  var rightPkm = document.getElementById('right-pkm');
+
+  leftPkm.addEventListener('click', ()=>{
+      pkmSearch--
+      consultarPkm(pkmSearch)
+  })
+  rightPkm.addEventListener('click', ()=>{
+    pkmSearch++
+    consultarPkm(pkmSearch)
+    if(pkmSearch >= 892){
+        pkmSearch = 0;
+    }
+})
+
+
 consultarPkm(pkmSearch)

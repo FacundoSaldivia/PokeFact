@@ -77,6 +77,7 @@ body {
   display: flex;
   justify-content: center;
   outline: 10px double #a1a1a1;
+  position: absolute;
 }
 
 .container .box .name {
@@ -88,7 +89,7 @@ body {
 
 .container .box .poke-img {
   position: absolute;
-  top: 10rem;
+  top: -5rem;
   width: 150px;
   height: 150px;
 }
@@ -106,7 +107,7 @@ body {
 
 .container .box .fact {
   position: absolute;
-  margin: 20vh 30vw;
+  margin: 15vh 10vw;
 }
 
 .container .box .fact p {
@@ -120,7 +121,23 @@ body {
   position: absolute;
 }
 
-.container .box .buttons .arrow {
+.container .box .buttons .left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  position: absolute;
+  left: 3rem;
+  top: 20rem;
+}
+
+.container .box .buttons .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  position: absolute;
+  right: 3rem;
+  top: 20rem;
+}
+
+.container .arrow {
   background: transparent;
   border: solid black;
   border-width: 0 3px 3px 0;
@@ -129,36 +146,38 @@ body {
   transition: 1s;
 }
 
-.container .box .buttons .arrow:hover {
+.container .arrow:hover {
   cursor: pointer;
 }
 
-.container .box .buttons .arrow:focus {
+.container .arrow:focus {
   outline: 0;
 }
 
-.container .box .buttons .arrow:active {
+.container .arrow:active {
   padding: 20px;
   transition: 1s;
 }
 
-.container .box .buttons .left {
+.container .left-pkm {
+  padding: 5px;
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   position: absolute;
-  left: 30rem;
-  top: 20rem;
+  left: 26rem;
+  top: -1rem;
 }
 
-.container .box .buttons .right {
+.container .right-pkm {
+  padding: 5px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   position: absolute;
-  right: 30rem;
-  top: 20rem;
+  top: -1rem;
+  left: 45rem;
 }
 
-.container .box .buttons button.closed {
+.container button.closed {
   display: none;
 }
 
