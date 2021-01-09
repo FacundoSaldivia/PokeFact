@@ -163,6 +163,9 @@ body {
 }
 
 @media (max-width: 640px) {
+  .container {
+    height: 100vh;
+  }
   .container .barra {
     position: absolute;
     top: 2rem;
