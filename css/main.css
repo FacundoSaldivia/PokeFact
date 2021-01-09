@@ -161,3 +161,37 @@ body {
 .container .box .buttons button.closed {
   display: none;
 }
+
+@media (max-width: 640px) {
+  .container .barra {
+    position: absolute;
+    top: 2rem;
+  }
+  .container .box {
+    width: 90%;
+    height: 70%;
+    margin-top: 100px;
+  }
+  .container .box .poke-img {
+    top: 4rem;
+  }
+  .container .box .fact {
+    margin: 8rem 3rem;
+  }
+  .container .box .fact p {
+    font-size: 80%;
+  }
+  .container .box .name {
+    top: 85%;
+    left: 50%;
+    font-size: 80%;
+  }
+  .container .box .buttons .left {
+    left: 0.8rem;
+    top: 10rem;
+  }
+  .container .box .buttons .right {
+    right: 0.8rem;
+    top: 10rem;
+  }
+}
