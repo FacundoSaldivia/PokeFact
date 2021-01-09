@@ -14,7 +14,6 @@ function consultarPkm(id){
             crearPkm(pokemon);
         })
         .catch(function(response){
-            alert('El pokemon no existe')
             consultarPkm(1);
         })
     })
