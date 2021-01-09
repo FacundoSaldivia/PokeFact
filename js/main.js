@@ -14,7 +14,7 @@ function consultarPkm(id){
             crearPkm(pokemon);
         })
         .catch(function(response){
-            console.log('no existe kpo');
+            alert('El pokemon no existe')
             consultarPkm(1);
         })
     })
