@@ -41,9 +41,10 @@ function consultarType(pokemon){
 }
 var auxArr = []
 function agregarType(array){
-        tipo[0].setAttribute('src',`img/${array[0]}.png`)
-        tipo[1].setAttribute('src',`img/${typeArray[1]}.png`)
-}
+    tipo[0].setAttribute('src',`img/${array[0]}.png`)
+    tipo[1].setAttribute('src',`img/${array[1]}.png`)
+    }
+
 
 function bgType(array){
     if (array.length > 1){
