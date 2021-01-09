@@ -171,12 +171,21 @@ body {
     top: 2rem;
   }
   .container .box {
-    width: 90%;
+    position: absolute;
     height: 70%;
-    margin-top: 100px;
+    width: 300px;
+    top: 10rem;
   }
   .container .box .poke-img {
+    top: -5.8rem;
+  }
+  .container .box .types {
+    position: absolute;
     top: 4rem;
+    padding: 0;
+  }
+  .container .box .types img {
+    padding: 0;
   }
   .container .box .fact {
     margin: 8rem 3rem;
