@@ -4,6 +4,7 @@ const tipo = document.getElementsByClassName('type');
 const leftButton = document.getElementById('left');
 const rightButton = document.getElementById('right');
 const input = document.getElementById('input');
+const pkmName = document.getElementById('name');
 
 function consultarPkm(id){
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -90,6 +91,7 @@ function crearPkm(pokemon){
     consultarType(pokemon);
     pkmImg.setAttribute('src',pokemon.sprites.front_default)
     consultarEspecie(pokemon.id)
+    pkmName.textContent = pokemon.name;
 }
 var pkmSearch = 1;
 
