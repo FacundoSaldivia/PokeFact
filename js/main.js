@@ -44,11 +44,11 @@ var auxArr = []
 function agregarType(array){
     if (array.length == 1){
         tipo[0].setAttribute('src',`img/${array[0]}.png`)
-        tipo[1].setAttribute('src', ' ')
         tipo[1].style.display = "none";
-    } else {
+    } else if (array.length > 1) {
         tipo[0].setAttribute('src',`img/${array[0]}.png`)
         tipo[1].setAttribute('src',`img/${typeArray[1]}.png`)
+        tipo[1].style.removeProperty('display');
     }
 }
 
