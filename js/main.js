@@ -104,7 +104,7 @@ function crearPkm(pokemon){
     } else{
         leftPkm.classList.remove('closed')
     }
-
+    pkmSearch = pokemon.id;
 }
 
 /** facts buttons */
@@ -136,6 +136,8 @@ barBtn.addEventListener("click", function() {
      barInput.value = '';
      console.log('asd')
   });
+
+
   var leftPkm = document.getElementById("left-pkm");
   var rightPkm = document.getElementById('right-pkm');
 
